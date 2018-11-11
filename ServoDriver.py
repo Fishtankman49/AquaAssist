@@ -12,5 +12,8 @@ print("Starting FEEDING")
 pwm.ChangeDutyCycle(8)
 time.sleep(1)
 
-pwm.ChangeDutyCycle(95)
+pwm.ChangeDutyCycle(150)
 time.sleep(3)
+
+pwm.stop()
+GPIO.cleanup()
