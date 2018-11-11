@@ -9,14 +9,15 @@ pwm.start(50)
 
 print("Starting FEEDING")
 
-pwm.ChangeDutyCycle(20)
-time.sleep(1)
-
-pwm.ChangeDutyCycle(95)
-time.sleep(1)
-
-pwm.ChangeDutyCycle(20)
-time.sleep(1)
-
-pwm.stop()
-GPIO.cleanup()
+try:
+    pwm.ChangeDutyCycle(2)
+    time.sleep(1)
+    pwm.ChangeDutyCycle(95)
+    time.sleep(1)
+    pwm.ChangeDutyCycle(2)
+    time.sleep(1)
+    pwm.stop()
+    GPIO.cleanup()
+except KeyboardInterrupt:
+    pwm.stop()
+    GPIO.cleanup()
