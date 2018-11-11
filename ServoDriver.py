@@ -10,8 +10,8 @@ pwm.start(50)
 print("Starting FEEDING")
 
 try:
-    for t in range (0,5):
-        print("Starting FEEDING")
+    for t in range (1,5):
+        print("Starting FEEDING " + str(t))
         pwm.ChangeDutyCycle(2)
         time.sleep(.5)
         for i in range (0,95):
